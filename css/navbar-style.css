@@ -1,0 +1,104 @@
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #242627; */
+    background: #fefeff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    /* position: fixed; */
+    /* overflow: hidden; */
+    
+    /* color: #ffffff; */
+  }
+  
+  .logo {
+    font-size: 0;
+    margin: 0;
+  }
+  .logo a {
+    text-decoration: none;
+    color: #242627;
+    margin-left: 20px;
+  }
+  .logo img{
+    width: 200px;
+    height: 60px;;
+  }
+  .navbar-links ul {
+    margin: 0px 10px;
+    padding: 0px;
+    display: flex;
+  }
+  .navbar-links ul li {
+    list-style: none;
+  }
+  .navbar-links ul li a {
+    text-decoration: none;
+    color: #242627;
+    padding: 20px;
+    font-weight: bold;
+    display: block;
+  transition-duration: 2s, 2s, 2s, 1s;
+
+  }
+  /* ------------------------------ */
+  .navbar-links ul li a:hover {
+    background: #353b48;
+    /* border-bottom: 4px solid #0984e3; */
+    color: #ffffff;
+    transition-duration: 2s, 2s, 2s, 1s;
+    
+  }
+/* When category select then hover automatic */
+.navbar-links ul li a.autoHover {
+  background: #353b48;
+  /* border-bottom: 4px solid #0984e3; */
+  color: #ffffff;
+  transition-duration: 2s, 2s, 2s, 1s;
+  }
+  /* ---------------------------------- */
+  .togglebtn {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+  .line {
+    height: 3px;
+    width: 100%;
+    background: #242627;
+    border-radius: 10px;
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .togglebtn {
+      display: flex;
+    }
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+    .navbar-links ul li {
+      text-align: center;
+    }
+    .navbar-links ul li a {
+      padding: 16px;
+    }
+    .navbar-links.active {
+      display: flex;
+    }
+  }
+  
